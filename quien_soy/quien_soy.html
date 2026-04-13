@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+}
+
+
+.contenedor{
+    width:100%;
+    
+}
+
+.menu{
+    background:black;
+    color:white;
+    align-items: center; 
+    padding: 0px 140px; 
+}
+
+.menu table{            
+    width:99%;
+    
+}
+
+.menu a{
+    color:white;
+    margin-left:10px;
+    
+}
+
+
+.principal{
+    padding:20px;
+    width: 50%;
+    margin: auto ;
+    
+}
+
+
+.imagen img{
+    width:400px;
+    height:400px;
+    padding:0px 50px;
+
+}
+
+.texto h1{
+    color:#000000;
+}
+
+
+
+.boton{
+    background:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    padding:10px 20px;
+
+}
+
+
+.perfil{
+    background:#545455;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+
+
+.perfil p{
+    width:60%;         
+    margin: auto;  
+    line-height:1.8;
+    font-size:20px;
+}
+
+
+.perfil p{
+    font-size:18px;
+    margin-top:30px;
+   
+}
+
+
+
+.avatar{
+    width: 250px;
+    height:250px;
+    border-radius:200px;
+}
+
+
+
+
+
+
+
+.proyecto {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.tproyecto {
+    width: 95%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 20px;
+    table-layout: fixed; 
+}
+
+.tproyecto td {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* Quitamos el padding lateral para que la imagen se estire */
+    padding: 0px 0px 20px 0px; 
+    vertical-align: top;
+    /* Esto asegura que la imagen no se salga de las esquinas redondeadas */
+    overflow: hidden; 
+}
+
+.tproyecto img {
+    /* Estira la imagen al 100% del ancho de la celda */
+    width: 100%;
+    height: 180px;
+    /* Mantiene la proporción de la imagen aunque se estire */
+    object-fit: cover;
+    /* Alineación vertical para eliminar el pequeño espacio que dejan las imágenes abajo */
+    vertical-align: bottom; 
+    margin-bottom: 15px;
+}
+
+.tproyecto h3 {
+    margin: 10px 15px;
+    font-size: 18px;
+}
+
+.ppp {
+    font-size: 14px;
+    /* Altura fija para mantener alineados los botones */
+    height: 85px; 
+    margin: 0 15px 25px 15px;
+    overflow: hidden;
+}
+
+
+
+.botoon {
+    background-color: #444443;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #444443;
+}
+
+.final{
+    background-color: #2f3542; 
+    color: #dcdde1;
+    text-align: right; 
+    padding: 15px 40px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.botoonn {
+   background-color: rgb(38, 0, 255);
+   padding: 15px;
+   color:white ;
+   text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+    
+<div class="contenedor">
+    <div class="menu">
+        <table>
+            <tr>
+                <td>
+                    <h4>RONALDO RINCON</h4>
+                </td>
+                <td style="text-align:right;">
+                    <a >Inicio</a>
+                    <a >¿Quién soy?</a>
+                    <a >Proyectos</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+  
+    <div class="principal">
+        <table>
+            <tr>
+                <td class="imagen">
+                    <img src="https://avatars.githubusercontent.com/u/125416154?v=4">
+                </td>
+
+                <td class="texto">
+                    <h1>¿Quién soy?</h1>
+               <p>
+                    Mi nombre es Ronaldo, tengo 18 años y actualmente soy aprendiz del SENA. 
+                    Poseo un título técnico en gestión agropecuaria y actualmente estoy desarrollando 
+                    un Tecnólogo en Análisis y Desarrollo de Software.
+                    </p>
+
+                    <p>
+                    Me apasiona la tecnología, el desarrollo web y el deporte. 
+                    Me considero una persona responsable, creativa y con muchas ganas de aprender.
+                    </p>
+
+
+                    <a href="#" class="boton">Leer más</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="perfil">
+        <img src="https://assets.dev-filo.dift.io/img/2019/07/28/0efef6fddc11fd70ad4ec62ccd33039a_sq.jpg" class="avatar">
+
+        <p> Mi nombre es Ronaldo, tengo 18 años y actualmente soy aprendiz del SENA, del cual poseo ya un título técnico en gestión agropecuaria y actualmente estoy desarrollando un Tecnólogo en análisis 
+            y desarrollo de software.Me apasiona la tecnología, el desarrollo web y el deporte. Me considero una persona responsable, creativa y con muchas ganas de aprender</p>
+
+        <p>- Ronaldo Rincon</p>
+    </div>
+  
+
+<div class="proyecto">
+    <h1>MIS PROYECTOS</h1>
+
+    <table class="tproyecto">
+        <tr>
+            <td>
+                <img src="https://www.temporalsa.com/wp-content/uploads/2018/01/hoja-de-vida-animada.jpg">
+                <h3>PROYECTO 1</h3>
+                <p class="ppp">
+                    Documento que presenta de manera organizada la información personal, 
+                    académica y profesional de una persona. Incluye datos como formación, 
+                    experiencia laboral, habilidades y logros de dicha persona.
+                </p>
+                <a href="/hoja_de_vida/hoja_de_vida.html" class="botoon">VER PROYECTO</a>
+            </td>
+
+            <td>
+                <img src="https://static.vecteezy.com/system/resources/previews/002/921/108/non_2x/set-of-id-or-employee-card-of-businessman-cartoon-character-vector.jpg">
+                <h3>PROYECTO 2</h3>
+                <p class="ppp">
+                    Componente visual diseñado para presentar de forma clara y atractiva 
+                    la información más relevante de una persona que se desea destacar, como nombre, foto, habilidades o dicha informacion que esta persona deseea denostrar.
+                </p>
+                <a href="/tarjeta_perfil/tarjeta_perfil.html" class="botoon">VER PROYECTO</a>
+            </td>
+
+            <td>
+                <img src="https://thumbs.dreamstime.com/b/hombre-d-que-es-usted-44176547.jpg">
+                <h3>PROYECTO 3</h3>
+                <p class="ppp">
+                    Sección destinada a presentar una descripción personal, donde se destacan 
+                    aspectos como identidad, intereses, habilidades y objetivos de una persona que esta esta dispuesta a dar a conocer a las demas.
+                
+                </p>
+                <a href="/quien_soy/quien_soy.html" class="botoon">VER PROYECTO</a>
+            </td>
+
+            <td>
+                <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png">
+                <h3>PROYECTO 4</h3>
+                <p class="ppp">Próximamente... contenido en desarrollo para ampliar el portafolio profesional.</p>
+                <a href="#" class="botoon">VER PROYECTO</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<a href="../index.html" class="botoonn"> VOLVER</a>
+
+
+<div class="final">
+    <p>Copyright © 2018. Todos los derechos reservados.</p>
+</div>
+</body>
+</html>
