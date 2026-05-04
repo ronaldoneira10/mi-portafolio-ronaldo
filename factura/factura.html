@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factura</title>
+</head>
+<style>
+
+
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#919090;
+}
+.factura {
+    width: 100%;
+    max-width: 900px;  
+    min-width: 600px;
+    margin: auto;
+    background: white;
+}
+
+
+
+        .invoice-header {
+            width: 100%;
+            display: flex;
+            
+        }
+        
+        .invoice-section {
+           text-align:left;
+           padding-right: 100px;
+          
+        }
+
+        .left-side {
+            flex: 1;
+            background-color: #111;
+            height: 150px;
+            display: flex;
+            padding-left: 150px;
+            clip-path: polygon(0% 0%, 92% 0%, 54% 160%, 0% 100%);
+            z-index: 1;
+        }
+
+            .separator {
+            width: 50px;
+            background-color: #d98a4b;
+            height: 240px;
+            z-index: 3;
+            margin-right: -10px;
+            margin-left: -60px;
+            margin-top: -20px;
+            clip-path: polygon(50% 1%, 100% 0%, 45% 95%, 0% 100%);
+            transform: rotate(30deg);
+        }
+
+        .right-side {
+            flex: 2;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            color: white;
+            margin-left: -180px;
+            background:
+                linear-gradient(to right, transparent 36%, #d98a4b 10%) no-repeat top / 101% 22px,
+                linear-gradient(to bottom, transparent 20px, #111 10px) no-repeat;
+            clip-path: polygon(31% 0%, 10% 100%, 100% 100%, 150% 0%);
+            z-index: 2;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: -80px;
+         
+        }
+
+        .logo-icon {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d98a4b;
+            border: 2px solid #d98a4b;
+            padding: 4px 8px;
+            border-radius: 4px;
+          
+        }
+
+        .logo-text h1 {
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        .logo-text p {
+            font-size: 8px;
+            color: #aaa;
+            text-transform: uppercase;
+        }
+
+        .invoice-section h2 {
+            font-size: 32px;
+            color: #d98a4b;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .invoice-details {
+            margin-top: 8px;
+            font-size: 10px;
+            text-align: right;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 1px;
+            
+
+            
+        }
+
+        .detail-row strong {
+            color: rgb(255, 255, 255);
+           
+            
+        }
+
+        .detail-row span:last-child {
+            color: #bbb;
+            width: 80px;
+            text-align: right;
+        }
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 17% 40% 15% 10% 15%; 
+    gap: 6px;
+    font-size: 12px;
+     margin: 20px 40px;
+   
+}
+
+
+
+
+
+
+
+.tabla {
+    background: #e28a42;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.tabla-a {    
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    gap: 10px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+}
+.tabla-b {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 10px;
+    height: 60px;
+     background: rgb(231, 231, 231);
+}
+.tabla-c {
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    gap: 10px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+}
+.tabla-d {
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    gap: 10px;
+    height: 60px;
+    background: rgb(231, 231, 231);
+}
+.tabla-e {
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    gap: 10px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+}
+.tabla-f {
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    gap: 10px;
+    height: 60px;
+     background: rgb(238, 238, 238);
+}
+
+#descrip1, #descrip2, #descrip3, #descrip4, #descrip5, #descrip6, #descrip7{
+    text-align: left ;
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
+
+.totales {
+    width: 840px;
+    margin-right: auto; 
+
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 77px;
+    font-size: 12px;
+    padding-right: 20px;
+    
+    
+}
+.total-final {
+    background: #e67e22;
+    color: white;
+    display: flex;
+    justify-content: space-between; 
+    padding: 1px 40px;
+    margin: 0px 40px;
+    font-size: 13px;
+   margin:20px 40px 
+    
+    
+    
+    
+}
+
+.factura-info {
+   margin: 30px 40px;
+   display: flex;
+   justify-content: space-between;
+   text-align: left;
+
+    }
+
+.terminos { 
+    width: 60%;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+
+    
+}
+
+
+
+.terminos h3 {
+    color: #000000;
+    font-size: 22px;
+    margin:10px 0px
+}
+
+
+
+.factura-info {
+   margin: 3px 40px;
+   display: flex;
+   justify-content: space-between;
+   
+}
+
+.firma {
+    text-align: center;
+    font-size: 13px;
+    padding-left: 135px;
+    margin-bottom: 40px;
+}
+
+.firma p {
+    color: #000000;
+    margin:0px;
+    
+    
+}
+
+.firma strong {
+    display: block;     
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.firma img {
+    width: 140px; 
+    height: auto;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.factura-decor {
+    background: black;
+    height: 40px;
+    margin-top: auto;
+}
+
+
+
+.info-contenedor {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 0px 20px;
+    align-items: start;
+    gap: 40px;
+   
+    
+}
+.info-box{
+    margin-top: auto;
+    padding-left: 20px;
+    
+
+}
+.info-box h4 { 
+    color: var(--naranja); 
+    margin-bottom: 5px; 
+    color: #f5b52b;
+    font-size:18px
+}
+
+.info-box h2 { 
+    margin: 5px 0; 
+    font-size: 22px; 
+}
+
+.info-box p { 
+    margin-top: auto ;
+    font-size: 13px; 
+    color: #444; 
+    padding-right: 80px;
+    
+}
+
+
+
+.footer {
+    display: flex;
+    height: 40px;
+    align-items: flex-end; 
+}
+
+.lado-naranja {
+    width: 17%;
+    height: 75%;
+    background: #c47a1e;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+   
+}
+
+.lado-negro {
+    width: 95%;
+    height: 100%; 
+    background: #0f1720;
+    clip-path: polygon(3% 0, 100% 0, 100% 100%, 0% 100%);
+     margin-top: 20px;
+}
+
+@media (max-width:890px){
+
+    .invoice-header{
+        flex-direction: column;
+    }
+
+    .left-side{
+        clip-path: none; 
+        padding-left: 40px;
+        height: 110px;
+    }
+
+    .separator{
+        display: none; 
+    }
+
+    .right-side{
+        margin-left: 0; 
+        clip-path: none; 
+        align-items: flex-start;
+        height: auto;
+        padding-left: 40px;
+    }
+
+    .logo-section{
+        margin-left: 0;
+    }
+
+    .invoice-details{
+        text-align: left;
+    }
+     .totales{
+        width: 100%;
+        
+        box-sizing: border-box;
+        padding: 0 79px;
+    }
+
+    .fila{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .total-final{
+        margin: 20px;
+    }
+}
+
+
+@media (min-width:150px) and (max-width:600px){
+
+  
+    .factura{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+   
+    .invoice-header{
+        flex-direction: column;
+    }
+
+    .left-side{
+        clip-path: none;
+        height: 90px;
+        padding-left: 40px;
+    }
+
+    .separator{
+        display: none;
+    }
+
+    .right-side{
+        margin-left: 0;
+        clip-path: none;
+        align-items: flex-start;
+        height: auto;
+        padding-left: 40px;
+    }
+
+    .logo-section{
+        margin-left: 0;
+    }
+
+    .invoice-section{
+        padding-right: 0;
+    }
+
+    .invoice-details{
+        text-align: left;
+        font-size: 9px;
+    }
+
+   
+    .info-contenedor{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .info-box p{
+        padding-right: 0;
+        font-size: 12px;
+    }
+
+   
+    .tabla-wrapper{
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .contenedor{
+        min-width: 650px; /* 🔥 mantiene estructura */
+        margin: 10px;
+    }
+
+   
+    .totales{
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .fila{
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .total-final{
+        margin: 15px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+  
+    .factura-info{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .terminos{
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .firma{
+        padding-left: 0;
+    }
+
+  
+
+}
+        
+</style>
+
+<body >
+
+
+    <div class="factura">
+        
+  
+
+             <div class="box">
+        <header class="invoice-header">
+            <div class="left-side">
+                <div class="logo-section">
+                    <div class="logo-icon">Z</div>
+                    <div class="logo-text">
+                        <h1>COMPANY</h1>
+                        <p>Company Tagline Here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="right-side">
+                <div class="invoice-section">
+                    <h2>INVOICE</h2>
+                    <div class="invoice-details">
+                        <div class="detail-row">
+                            <strong>Invoice Number:</strong>
+                            <span>#123456</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Account No:</strong>
+                            <span>1234 5678 9101</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Invoice Date:</strong>
+                            <span>April 05, 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+            
+
+   <div class="info-contenedor">
+        <div class="info-box">
+            <h4>INVOICE TO:</h4>
+            <h2>Jhone Doe.</h2>
+            <p>Managing Director, Company Ltd.</p>
+            <p>Phone: +123 4567 8910</p>
+            <p>Email: example@mail.com</p>
+        </div>
+        <div class="info-box" >
+            <h4>Payment Method</h4>
+            <p>Account No: 1234 5678 910</p>
+            <p>Account Name: Jhone Doe</p>
+            <p> Branch Name: XYZ</p>
+        </div>
+    </div>
+<div class="tabla-wrapper">
+    <div class="contenedor">
+     
+    <div class="tabla">DATE</div>
+    <div class="tabla" id="descrip1"> ITEM DESCRIPTION</div>
+    <div class="tabla">PRICE</div>
+    <div class="tabla">QTY</div>
+    <div class="tabla">TOTAL</div>
+
+
+    <div class="tabla-a">jan 10,2020</div>
+    <div class="tabla-a" id="descrip2">Businesscard Design</div>
+    <div class="tabla-a">$300</div>
+    <div class="tabla-a">2</div>
+    <div class="tabla-a">$600.00</div>
+
+    <div class="tabla-b">jan 10,2020</div>
+    <div class="tabla-b" id="descrip3">Fruit Flayer Desing</div>
+    <div class="tabla-b">$455</div>
+    <div class="tabla-b">1</div>
+    <div class="tabla-b">$450.00</div>
+
+    <div class="tabla-c">jan 10,2020</div>
+    <div class="tabla-c" id="descrip4">Application Interface Design</div>
+    <div class="tabla-c">$300</div>
+    <div class="tabla-c">1</div>
+    <div class="tabla-c">$300.00</div>
+
+    <div class="tabla-d">jan 9,2020</div>
+    <div class="tabla-d" id="descrip5">Thense Development</div>
+    <div class="tabla-d">$150</div>
+    <div class="tabla-d">3</div>
+    <div class="tabla-d">$450.00</div>
+
+    <div class="tabla-e">jan 9,2020</div>
+    <div class="tabla-e" id="descrip6">Furl Branding Design</div>
+    <div class="tabla-e">$150</div>
+    <div class="tabla-e">1</div>
+    <div class="tabla-e">$150.00</div>
+
+    <div class="tabla-f">jan 8,2020</div>
+    <div class="tabla-f" id="descrip7">Creative Logo Design</div>
+    <div class="tabla-f">$200</div>
+    <div class="tabla-f">1</div>
+    <div class="tabla-f">$200.00</div>
+    </div>
+</div>
+<div class="totales">
+
+    <div class="fila">
+        <p>Subtotal</p>
+        <p>$3150.00</p>
+    </div>
+
+    <div class="fila">
+        <p>Discount</p>
+        <p>$0.00</p>
+    </div>
+
+    <div class="fila">
+        <p>Tax (10%)</p>
+        <p>$315.00</p>
+    </div>
+</div>
+
+
+<div class="total-final">
+    <p>Total:</p>
+    <p>$3465.00</p>
+</div>
+
+  <div class="factura-info">
+        <div class="terminos">
+            <h3>Terms & Conditions:</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida<br>
+            Risus commodo viverra maecenas accumsan lacus vel facilisis. <br>
+        </div>
+        <div class="firma">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/538/077/non_2x/manual-signature-for-documents-on-white-background-hand-drawn-calligraphy-lettering-vector-illustration.jpg">
+            <strong>Your Name & Signature</strong>
+            <p>Account Manager</p>
+        </div>
+    </section>
+
+ 
+</div>
+<div class="footer">
+<div class="lado-naranja"></div>
+<div class="lado-negro"></div>
+</div>
+</div>
+</body>
+</html>
