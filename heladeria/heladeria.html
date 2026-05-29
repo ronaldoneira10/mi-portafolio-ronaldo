@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Vaca Lola | Heladería Artesanal</title>
+    <style>
+       
+
+        /* ESTILOS BASE */
+        body {
+            margin: 0;
+            background-color: rgb(252, 222, 182);
+            font-family: var(--fuente-lectura);
+           
+            
+        }
+
+        /* NAVEGACIÓN (FLEXBOX) */
+        .cabecera-navegacion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: rgb(253, 248, 248);
+            border-bottom: 10px solid rgb(253, 83, 140);
+        }
+
+        .logo-lola {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          
+        }
+
+        img{
+            width:80px;
+            height:80px
+        }
+
+        h1{
+            font-size: 20px;
+         font-family:Verdana, Geneva, Tahoma, sans-serif
+         
+         } 
+
+
+        .menu-enlaces {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu-enlaces a {
+           
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            
+        }
+
+      
+        .seccion-hero {
+            height: 430px;
+        
+          
+
+            background: linear-gradient(#302e2e66, rgba(0,0,0,0.4)), 
+                        url("/img/hela.png") ; ;
+                        background-repeat: no-repeat;
+                    
+            background-size: 30%;
+            color: #fcfcfc;
+            text-align: center;
+            padding: 20px 0px;
+        }
+        .imagen-helado{
+            width: 100%;
+            height: 100%;
+        }
+        .titulo-principal {
+          
+           
+            line-height: 1.2;
+            width: 420px;
+            text-align:left;
+            margin-top: 100px;
+            margin-left: 100px;
+            font-size: 3rem;
+            text-shadow: 0px 5px rgb(253, 83, 140);
+            
+        }
+
+        .eslogan-lola {
+           
+            font-size: 1.5rem;
+            background-color:rgb(255, 255, 255);
+            color:black;
+           text-align: center;
+            width: 370px;
+            margin: 0px ;
+           margin-left: 100px;
+           clip-path: polygon(3% 0, 100% 0, 100% 100%, 0% 100%);
+           border-bottom: 4px solid rgb(253, 76, 135);
+           border-right: 4px solid rgb(253, 76, 135);
+          
+        }
+
+     
+        .destacado-mes {
+            background-color:rgb(255, 255, 255);
+            margin: -50px 10% 40px 10%;
+            padding: 40px;
+            text-align: center;
+            border: 10px  solid rgb(253, 83, 140);
+        }
+
+        .etiqueta-mes::before {
+            content: "🔥 ¡NUEVO! ";
+            font-weight: bold;
+            color: var(--primario-fresa);
+        }
+
+       
+        .contenedor-catalogo {
+            padding: 60px 5%;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            font-family: var(--fuente-loca);
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--chocolate-oscuro);
+        }
+
+        .rejilla-sabores {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px;
+        }
+
+        .tarjeta-producto {
+            background: white;
+            border-radius: 15px;
+            border: 4px solid black;
+      
+            
+        }
+
+       
+        .tarjeta-producto:hover {
+            
+            border-color: rgb(253, 76, 135);
+        }
+
+        .imagen-helado {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: red;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .info-helado {
+            padding: 25px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="cabecera-navegacion">
+        <div class="logo-lola">
+            <img src="/img/logo.png" alt="Logo LA VACA LOLA">
+            <div class="logo-grafico"></div>
+            <h1>LA VACA LOLA</h1>
+        </div>
+        <div class="menu-enlaces">
+            <a href="#sabores">Sabores</a>
+            <a href="#historia">Nosotras</a>
+            <a href="#videos">Social</a>
+            <a href="#eventos">Eventos</a>
+        </div>
+    </header>
+
+    <section class="seccion-hero">
+        <h2 class="titulo-principal">¡SABOR LOCAL QUE TE PONE A SALTAR!</h2>
+        <p class="eslogan-lola">Helados con Actitud Colombiana</p>
+    </section>
+
+    <div class="destacado-mes">
+        <p class="etiqueta-mes">Sabor del Mes</span>
+        <h3 style="font-size: 2rem;">Aguacate & Chocolate </h3>
+        <p>Parece raro, pero sabe a gloria. La cremosidad del aguacate hass con el poder del cacao santandereano.</p>
+    </div>
+
+    <main class="contenedor-catalogo" id="sabores">
+        <h2 class="titulo-seccion">Nuestros 12 Sabores Prohibidos de helado</h2>
+        <div class="rejilla-sabores">
+            
+            <article class="tarjeta-producto">
+                <img src="https://letengoeldato.com/wp-content/uploads/2024/07/gayras-gourmet-barranquilla-Le-Tengo-el-Dato-2-scaled.jpg" class="imagen-helado" alt="Mango">
+                <div class="info-helado">
+                    <h3>Mango Biche con Sal</h3>
+                    <p>Ácido, fresquito y con el toque de sal que te encanta.</p>
+                    <span class="etiqueta-precio">$5.500 / bola</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <img src="https://caracol.com.co/resizer/v2/5DLYO2V2Q5GOJFFMDF5E4XSX54.png?auth=1e8d8f1fa084056c16d438a2d7f80a14d569defdfeecb3c0b5f85c26529c5cbc" class="imagen-helado" alt="Queso">
+                <div class="info-helado">
+                    <h3>Queso & Bocadillo</h3>
+                    <p>El "casado" tradicional convertido en helado gourmet.</p>
+                    <span class="etiqueta-precio">$6.000 / bola</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <img src="/img/cerveza.png" class="imagen-helado" alt="Cerveza">
+                <div class="info-helado">
+                    <h3>Cerveza Artesanal</h3>
+                    <p>Para los que quieren refrescarse con un toque de lúpulo.</p>
+                    <span class="etiqueta-precio">$7.000 / bola</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                 <img src="https://images.unsplash.com/photo-1534706936160-d5ee67737249?w=400" class="imagen-helado" alt="lulo y menta">
+                <div class="info-helado">
+                    <h3>Lulo & Menta</h3>
+                    <p>Explosión cítrica con frescura extrema.</p>
+                    <span class="etiqueta-precio">$5.500</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <img src="https://i.pinimg.com/736x/e3/c0/4d/e3c04d363923e045f031970f8efd2838.jpg" class="imagen-helado" alt="chontaduro">
+                <div class="info-helado">
+                    <h3>Chontaduro</h3>
+                    <p>El sabor del pacífico en una textura increíble.</p>
+                    <span class="etiqueta-precio">$6.500</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <img src="https://static.wixstatic.com/media/46eb78_3f34da0f648a4a0484903e3e475731cd~mv2.jpg/v1/fill/w_496,h_280,al_c,lg_1,q_80,enc_avif,quality_auto/46eb78_3f34da0f648a4a0484903e3e475731cd~mv2.jpg" class="imagen-helado" alt="borojo">
+                <div class="info-helado">
+                    <h3>Borojó Energético</h3>
+                    <p>Dulce, potente y muy tradicional.</p>
+                    <span class="etiqueta-precio">$6.500</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <img src="https://media.istockphoto.com/id/1326143969/es/foto/bol-con-bolas-de-helado-de-vainilla.jpg?s=612x612&w=0&k=20&c=1U2ePAMN2Zodvnl5917YtsnUIs3a0z_u1FHazJthkIc=" class="imagen-helado" alt="vainilla">
+                <div class="info-helado">
+                    <h3>Vainilla Bourbon</h3>
+                    <p>Clásica, cremosa y con vainilla real.</p>
+                    <span class="etiqueta-precio">$5.000</span>
+                </div>
+            </article>
+            
+            <article class="tarjeta-producto">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400" class="imagen-helado" alt="chocolate">
+                <div class="info-helado">
+                    <h3>Chocolate 70%</h3>
+                    <p>Intensidad pura para amantes del cacao.</p>
+                    <span class="etiqueta-precio">$6.000 / bola </span>
+                </div>
+            </article>
+            <article class="tarjeta-producto">
+                <img src="https://i0.wp.com/www.elrecetariolatino.com/wp-content/uploads/2018/04/Helado-de-Maracuy%C3%A1.jpg?fit=1200%2C733&ssl=1" class="imagen-helado" alt="maracuyá">
+                <div class="info-helado">
+                    <h3>Maracuyá</h3>
+                    <p>La fruta de la pasión en su estado más puro.</p>
+                    <span class="etiqueta-precio">$5.500</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?w=400" class="imagen-helado" alt="Cafe del huila">
+                <div class="info-helado">
+                    <h3>Café del Huila</h3>
+                    <p>Tostión perfecta hecha helado.</p>
+                    <span class="etiqueta-precio">$6.000</span>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <img src="https://heladeriamagda.com/cdn/shop/files/Cocoservidoyfruta.jpg?v=1755961952" class="imagen-helado" alt="Coco-Arequipe">
+                <div class="info-helado">
+                    <h3>Coco-Arequipe</h3>
+                    <p>Dulce sabor a arequipe con coco rallado tostado.</p>
+                    <span class="etiqueta-precio">$6.500</span>
+                </div>
+            </article>
+            
+            <article class="tarjeta-producto">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgu8Nuf8fSCTe2TRGkErHHjdSj8FS1DoVjzQ4IkPfbcdCRDAFs0M-VcfQZqqU0sKtYDTYPOc8sByy-WhxdjbsbLjrvARXqeAQOqo3u7DtnNDW96BSaYO2i1hYnw4G5iWLVcjqaJx49C4Us/s1600/11072012-IMG_3404.JPG" class="imagen-helado" alt="Aguacate y Chocolate">
+                <div class="info-helado">
+                    <h3>Aguacate y Chocolate</h3>
+                    <p>Una combinación única de sabores tropicales y chocolate.</p>
+                    <span class="etiqueta-precio">$6.000</span>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+</body>
+</html>
